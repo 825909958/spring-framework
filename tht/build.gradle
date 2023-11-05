@@ -1,0 +1,40 @@
+plugins {
+    id 'java-library'
+}
+
+group 'org.springframework'
+version '6.0.14-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    api(project(":spring-context"))
+    api(project(":spring-context-indexer"))
+    api(project(":spring-context-support"))
+    api(project(":spring-instrument"))
+    api(project(":spring-web"))
+    api(project(":spring-core"))
+    api(project(":spring-webmvc"))
+    api(project(":spring-beans"))
+
+    api(project(":spring-jcl"))
+
+    api(project(":spring-oxm"))
+    api(project(":spring-tx"))
+    api(project(":spring-jdbc"))
+
+    api(project(":spring-aop"))
+    api(project(":spring-aspects"))
+    api(project(":spring-expression"))
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
